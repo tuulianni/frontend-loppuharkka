@@ -1,0 +1,26 @@
+body {
+	margin-top: 100px;
+	text-align: center;
+
+	font-family: 'Courier New', Courier, monospace;
+
+	background-color: rgb(96, 96, 96);
+}
+
+h1 {
+	font-size: 50px;
+}
+
+button {
+	padding: 10px;
+	margin: 10px;
+
+	border-radius: 25%;
+	
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.AddNote {
+	visibility: hidden;
+}
