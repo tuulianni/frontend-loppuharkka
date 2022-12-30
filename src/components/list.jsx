@@ -1,14 +1,19 @@
 const List = ( {text, date} ) => {
+
+	const handleClick = () => {
+		console.log("poista klikattu")
+
+		
+	}
 	return (
 		<li>
 			<div>
 			<p 
 				role="button" 
 				tabIndex={0} 
-				className="delete-button" 
-				onKeyDown={() => console.log("key down")}
-				onClick={() => console.log("click")}
-			>poista</p>
+				id="delete" 
+				onClick={{handleClick}}
+			>(x)</p>
 
 			<p>{text}</p>
 			<p>{date}</p>

@@ -28,3 +28,28 @@ select {
 #dropdown {
 	margin: 20px;
 }
+
+li {
+
+	background-color: #f5f5dc;
+	width: 300px;
+	padding: 10px;
+	margin: 20px;
+
+	list-style-type: none;
+
+}
+
+#results {
+
+  display: flex;
+  justify-content: center;	
+
+}
+
+#delete {
+
+	text-align: right;
+	border-color: black;
+	border-width: 1px;
+}
