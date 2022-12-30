@@ -21,10 +21,10 @@ button {
 	font-weight: 600;
 }
 
-.AddNote {
-	visibility: hidden;
-}
-
 select {
 	width: 200px;
+}
+
+#dropdown {
+	margin: 20px;
 }

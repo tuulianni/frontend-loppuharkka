@@ -5,8 +5,6 @@ const AddCourses = () => {
 	
 	const [text, setText] = useState('')
 
-
-
 		const handleClick = (e) => {
 			console.log("tallenna painettu", text);
 
@@ -14,7 +12,7 @@ const AddCourses = () => {
 				return;
 			}
 
-			Courses("add", text);
+			Courses("add", text)
 
 		}
 

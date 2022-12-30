@@ -1,7 +1,6 @@
 import { useState } from "react"
-import Courses from "./courses";
 
-const Dropdown = () => {
+const Dropdown = ( {courses}) => {
 
 	const [name, setName] = useState()
 
@@ -11,12 +10,12 @@ const Dropdown = () => {
 	};
 
 	return (
-		<div>
+		<div id="dropdown">
 			<label>
 				<select value={name} onChange={handleChange}>
 
-					{courses.map((option) => (
-						<option value={option.name}>{option.name}</option>
+					{courses.map((option, i) => (
+						<option key={i} value={option.name}>{option.name}</option>
 					))}
 				</select>
 			</label>

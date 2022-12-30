@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Dropdown from "./dropdown";
 import Time from "./time";
 
 const AddNotes = () => {
@@ -16,8 +15,6 @@ const AddNotes = () => {
 
 	return (
 		<div>
-			<br />
-		
 			<textarea 
 				name="teksti" 
 				id="teksti" 

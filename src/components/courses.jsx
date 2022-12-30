@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Courses = () => {
+function Courses(x, y) {
 
 	const [courses, setCourses] = useState ([
 		{
@@ -13,19 +13,22 @@ const Courses = () => {
 		}
 	])
 
+	if (x === "add") {
+		addingCourse(y);
+	}
+
 	const addingCourse = (y) => {
 		
 		const [id, setId] = useState('')
 		const [name, setName] = useState('')
 
 		setName = y;
-		setId = courses.length+1;
+		z = courses.length + 1;
+		setId = z;
 
 		let new_course = {id: id, name: name}
 		console.log(new_course)
 		setCourses([...courses, new_course])
-		setName('')
-		setId('')
 	}
 	
 	

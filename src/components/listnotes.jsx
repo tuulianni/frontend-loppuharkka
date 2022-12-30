@@ -1,14 +1,14 @@
-import Courses from "./courses"
+import List from "./list"
 
-const ListNotes = () => {
-
-	Courses("print")
+const ListNotes = ( {notes} ) => {
 	
 	return (
-		<div>
-			<div className="results">
-				<p>Toivottavasti tähän joskus tulee jotain</p>
-			</div>
+		<div id="results">
+			<ul>
+				{notes.map((p, i) => {
+					return <List key={i} text={p.text} date={p.date} />
+				})}
+			</ul>
 		</div>
 	)
 }
