@@ -6,17 +6,19 @@ import ListNotes from "./listnotes";
 
 function Buttons() {
 
-	const [na, setna] = useState(false); //addnote
-	const [nl, setnl] = useState(false); //listnote
-	const [ca, setca] = useState(false); //addcourse
-
+	//listat, joiden haluaisin olevan muualla
 	const [courses, setCourses] = useState ([
 		{ id: 0, name: "matikka" },
 		{ id: 1, name: "äikkä" }
 	])
 	const [notes, setNotes] = useState ([
-		{ text: "tämä on testi", date: "1.1.2023 00:00" }
+		{ note: "tämä on testi", date: "1.1.2023 00:00" }
 	])
+
+	//nappien toimintahommat alkaa 
+	const [na, setna] = useState(false); //addnote
+	const [nl, setnl] = useState(false); //listnote
+	const [ca, setca] = useState(false); //addcourse
 
 	//piilottaa auki olevat avattavan tieltä
 	const hideElse = (x, y) => {
@@ -53,7 +55,7 @@ function Buttons() {
 				{na && (
 						<div>
 							<Dropdown courses= {courses} />
-							<AddNotes />
+							<AddNotes notes = {notes} setNotes = {setNotes}/>
 						</div>
 					)}
 				{nl && (

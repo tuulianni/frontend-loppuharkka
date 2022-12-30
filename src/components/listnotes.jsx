@@ -6,7 +6,7 @@ const ListNotes = ( {notes} ) => {
 		<div id="results">
 			<ul>
 				{notes.map((p, i) => {
-					return <List key={i} text={p.text} date={p.date} />
+					return <List key={i} text={p.note} date={p.date} />
 				})}
 			</ul>
 		</div>

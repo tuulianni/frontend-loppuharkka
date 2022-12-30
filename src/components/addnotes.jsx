@@ -1,16 +1,25 @@
 import { useState } from "react";
-import Time from "./time";
 
-const AddNotes = () => {
+const AddNotes = ( { notes, setNotes }) => {
 
 	const [text, setText] = useState('')
 
-	let data = {text, Time}
-	console.log(data)
+		const handleClick = () => {
+			console.log("tallenna painettu", text);
+			
+			const date = new Date();
 
-		const handleClick = (e) => {
-			console.log("tallenna painettu", text, Time);
-			//addText();
+			let new_note = { note: text, date: date }
+			console.log(new_note)
+			setNotes([...notes, new_note])
+			setNotes('')
+
+			return notes;
+
+		}
+
+		const handleText = (i) => {
+			setText(i.target.value)
 		}
 
 	return (
@@ -21,7 +30,7 @@ const AddNotes = () => {
 				cols="50" 
 				rows="20" 
 				value={text}
-				onChange={(e) => setText(e.target.value)}
+				onChange={handleText}
 				maxLength={200}
 			></textarea>
 			<br />
