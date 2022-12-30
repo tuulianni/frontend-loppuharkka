@@ -24,3 +24,7 @@ button {
 .AddNote {
 	visibility: hidden;
 }
+
+select {
+	width: 200px;
+}

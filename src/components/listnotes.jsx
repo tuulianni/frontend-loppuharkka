@@ -1,7 +1,14 @@
-function ListNotes() {
+import Courses from "./courses"
+
+const ListNotes = () => {
+
+	Courses("print")
+	
 	return (
 		<div>
-			<p>Tähän tulloo jotain jos tulloo!</p>
+			<div className="results">
+				<p>Toivottavasti tähän joskus tulee jotain</p>
+			</div>
 		</div>
 	)
 }

@@ -1,17 +1,27 @@
 import { useState } from "react";
+import Courses from "./courses";
 
 const AddCourses = () => {
-
+	
 	const [text, setText] = useState('')
+
+
 
 		const handleClick = (e) => {
 			console.log("tallenna painettu", text);
+
+			if (text == '') {
+				return;
+			}
+
+			Courses("add", text);
+
 		}
 
 	return (
 		<div>
 			<br />
-			<textarea 
+			<input 
 				name="teksti" 
 				id="teksti" 
 				cols="30" 
@@ -19,7 +29,7 @@ const AddCourses = () => {
 				value={text}
 				onChange={(e) => setText(e.target.value)}
 				maxLength={200}
-			></textarea>
+			></input>
 			<br />
 			<button onClick={handleClick}>Tallenna</button>
 		</div>

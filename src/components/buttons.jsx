@@ -5,36 +5,37 @@ import ListNotes from "./listnotes";
 
 function Buttons() {
 
-const [na, setna] = useState(false);
-const [nl, setnl] = useState(false);
-const [ca, setca] = useState(false);
+	const [na, setna] = useState(false); //addnote
+	const [nl, setnl] = useState(false); //listnote
+	const [ca, setca] = useState(false); //addcourse
 
-const hideElse = (x, y) => {
-	x(false);
-	y(false);
-}
+	//piilottaa auki olevat avattavan tieltä
+	const hideElse = (x, y) => {
+		x(false);
+		y(false);
+	}
 
-const AddNote = () => {
-	console.log("AddNote clicked")
-	setna(current => !current);
+	const AddNote = () => {
+		console.log("AddNote clicked")
+		setna(current => !current);
 
-	hideElse(setnl, setca);
-}
+		hideElse(setnl, setca);
+	}
 
-const ListNote = () => {
-	console.log("ListNotes clicked")
-	setnl(current => !current);
+	const ListNote = () => {
+		console.log("ListNotes clicked")
+		setnl(current => !current);
 
-	hideElse(setna, setca);
-}
+		hideElse(setna, setca);
+	}
 
-const AddCourse = () => {
-	console.log("AddCourse")
+	const AddCourse = () => {
+		console.log("AddCourse")
 
-	setca(current => !current);
+		setca(current => !current);
 
-	hideElse(setnl, setna);
-}
+		hideElse(setnl, setna);
+	}
 
 	return (
 		<div>
