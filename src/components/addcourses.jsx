@@ -12,8 +12,6 @@ const AddCourses = () => {
 				return;
 			}
 
-			Courses("add", text)
-
 		}
 
 	return (
