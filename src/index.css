@@ -5,6 +5,11 @@ body {
 	font-family: 'Courier New', Courier, monospace;
 
 	background-color: rgb(96, 96, 96);
+
+	max-width: 600px;
+	margin: auto;
+
+
 }
 
 h1 {
@@ -41,10 +46,14 @@ li {
 	margin-bottom: 20px;
 }
 
+#teksti {
+		margin: auto;
+		width: 400px;;
+}
 #results {
 
-  display: flex;
-  justify-content: center;	
+  margin: auto;
+	width: 400px;
 
 }
 
@@ -72,4 +81,26 @@ li {
 
 #course {
 	text-transform: uppercase;
+}
+
+#buttons {
+	margin-bottom: 20px;
+}
+
+#valittu-kurssi {
+	text-transform: uppercase;
+}
+
+#quicknotes li {
+
+margin: auto;
+text-align: left;
+padding-left: 20px;
+margin-bottom: 20px
+
+
+}
+
+.inputti {
+	width: 200px;
 }

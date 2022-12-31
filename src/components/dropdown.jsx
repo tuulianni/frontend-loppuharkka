@@ -1,11 +1,16 @@
 import { useState } from "react"
 
-const Dropdown = ( {courses}) => {
+const Dropdown = ( {courses, handleCourse}) => {
 
 	const [name, setName] = useState('')
 
 	const handleChange = (e) => {
 		setName(e.target.value);
+		console.log(e.target.value)
+		let x = e.target.value
+		let y = e.target.key
+		
+		handleCourse(x, y)
 
 	};
 
@@ -13,9 +18,9 @@ const Dropdown = ( {courses}) => {
 		<div id="dropdown">
 			<label>
 				<select value={name} onChange={handleChange}>
-
-					{courses.map((option, i) => (
-						<option key={i} id={option.id} value={option.name}>{option.name}</option>
+						<option>Valitse kurssi</option>
+					{courses.map((option) => (
+						<option key={option.id} value={option.name}>{option.id}: {option.name}</option>
 					))}
 				</select>
 			</label>

@@ -53,8 +53,12 @@ function Buttons() {
 		const id = courses.length +1;
 		const r = {id: id, name: d}
 		setCourses([...courses, r])
-		
+
 		console.log(courses)
+		console.log("Opintojakso " + d + " lisätty id:lle " + id)
+
+		//en tiedä miten tän sais tonne tulostumaan kun teen tän täällä :(
+			return <p>Opintojakso {d} lisätty id:lle {id}</p>
 	}
 
 	getCourses();
@@ -101,13 +105,17 @@ function Buttons() {
 
 	return (
 		<div>
-			<button onClick={AddNote}>Lisää muistiinpano</button>
-			<button onClick={ListNote}>Listaa muistiinpano</button>
-			<button onClick={AddCourse}>Lisää kurssi</button>
+			<div id="buttons">
+				<button onClick={AddNote}>Lisää muistiinpano</button>
+				<button onClick={ListNote}>Listaa muistiinpano</button>
+				<button onClick={AddCourse}>Lisää kurssi</button>
+			</div>
 				{na && (
 						<div>
-							<Dropdown courses= {courses} />
-							<AddNotes notes = {notes} setNotes = {setNotes}/>
+							<AddNotes 
+								notes = {notes} 
+								setNotes = {setNotes}
+								courses = {courses} />
 						</div>
 					)}
 				{nl && (

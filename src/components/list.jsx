@@ -1,4 +1,4 @@
-const List = ( {course, text, date, deleteNote} ) => {
+const List = ( {id, course, text, date, deleteNote} ) => {
 
 	return (
 		<li>
@@ -13,7 +13,8 @@ const List = ( {course, text, date, deleteNote} ) => {
 					deleteNote(text)}}
 			>x</p>
 			<div id="note-div">
-				<p id="course">{course}</p>
+				
+				<p id="course">{id}: {course}</p>
 				<p id="note">{text}</p>
 				<p id="date">{date}</p>
 			</div>
