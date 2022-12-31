@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const Dropdown = ( {courses}) => {
 
-	const [name, setName] = useState()
+	const [name, setName] = useState('')
 
 	const handleChange = (e) => {
 		setName(e.target.name);

@@ -1,10 +1,5 @@
-const List = ( {text, date} ) => {
+const List = ( {text, date, deleteNote} ) => {
 
-	const handleClick = () => {
-		console.log("poista klikattu")
-
-		
-	}
 	return (
 		<li>
 			<div>
@@ -12,7 +7,8 @@ const List = ( {text, date} ) => {
 				role="button" 
 				tabIndex={0} 
 				id="delete" 
-				onClick={{handleClick}}
+				onKeyDown={() => deleteNote(text.text)}
+				onClick={() => deleteNote(text.text)}
 			>(x)</p>
 
 			<p>{text}</p>

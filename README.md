@@ -1,6 +1,6 @@
 Frontend-kurssin tehtävä
 
-Sorry, this is in finnish.
+Sorry, this is in finnish only.
 
 Tarkoituksena tehdä reactilla muistiinpanoapp, johon voi tallentaa kurssimuistiinpanoja ja poistaa niitä. Lisäksi voi lisätä kursseja.
 

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import AddCourses from "./addcourses";
 import AddNotes from "./addnotes"
 import Dropdown from "./dropdown";
@@ -7,13 +7,42 @@ import ListNotes from "./listnotes";
 function Buttons() {
 
 	//listat, joiden haluaisin olevan muualla
-	const [courses, setCourses] = useState ([
-		{ id: 0, name: "matikka" },
-		{ id: 1, name: "äikkä" }
-	])
+	const [courses, setCourses] = useState ([])
 	const [notes, setNotes] = useState ([
 		{ note: "tämä on testi", date: "1.1.2023 00:00" }
 	])
+
+	const getCourses = async () => {
+		//const url = "https://luentomuistiinpano-api.deta.dev/courses";
+
+		useEffect(() => {
+      fetch('https://luentomuistiinpano-api.deta.dev/courses')
+         .then((response) => response.json())
+         .then((data) => {
+            console.log(data);
+            setCourses(data);
+         })
+         .catch((err) => {
+            console.log(err.message);
+         });
+   }, []);
+
+		//addingCourses(d);
+
+	}
+
+	const addingCourses = ( d ) => {
+		setCourses([...courses, d])
+	}
+
+	getCourses();
+
+	const deleteNote = (t) => {
+		const r = notes.filter(note => note.text !== t)
+		setNotes(r);
+
+		console.log("poista klikattu")
+	}
 
 	//nappien toimintahommat alkaa 
 	const [na, setna] = useState(false); //addnote
@@ -60,12 +89,12 @@ function Buttons() {
 					)}
 				{nl && (
 					<div>
-						<ListNotes notes = {notes} />
+						<ListNotes notes = {notes} deleteNote = {deleteNote}/>
 					</div>
 				)}
 				{ca && (
 					<div>
-						<AddCourses />
+						<AddCourses addingCourses = {addingCourses} />
 					</div>
 				)}
 		</div>
