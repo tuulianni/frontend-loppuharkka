@@ -12,8 +12,14 @@ Voit:
 - Voit poistaa muistiinpanoja
 - Voit lisätä kursseja, mutta et valitettavasti poistaa niitä
 
-Asennus tapahtuu ottamalla tämän omalle koneelle
- -> npm install
+Asennus:
 
- 
+git clone https://github.com/tuulianni/frontend-loppuharkka.git
+cd frontend-loppuharkka
+npm install
+npm run dev
+
+
+
+
 
