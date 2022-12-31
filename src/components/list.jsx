@@ -1,4 +1,4 @@
-const List = ( {text, date, deleteNote} ) => {
+const List = ( {course, text, date, deleteNote} ) => {
 
 	return (
 		<li>
@@ -8,11 +8,15 @@ const List = ( {text, date, deleteNote} ) => {
 				tabIndex={0} 
 				id="delete" 
 				onKeyDown={() => deleteNote(text.text)}
-				onClick={() => deleteNote(text.text)}
-			>(x)</p>
-
-			<p>{text}</p>
-			<p>{date}</p>
+				onClick={() => {
+					console.log(text)
+					deleteNote(text)}}
+			>x</p>
+			<div id="note-div">
+				<p id="course">{course}</p>
+				<p id="note">{text}</p>
+				<p id="date">{date}</p>
+			</div>
 			
 			</div>
 		</li>

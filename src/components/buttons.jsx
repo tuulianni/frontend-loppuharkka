@@ -8,10 +8,27 @@ function Buttons() {
 
 	//listat, joiden haluaisin olevan muualla
 	const [courses, setCourses] = useState ([])
-	const [notes, setNotes] = useState ([
-		{ note: "tämä on testi", date: "1.1.2023 00:00" }
-	])
+	const [notes, setNotes] = useState ([])
 
+	//täytetään muistiinpanolista
+	const getNotes = async () => {
+
+		useEffect(() => {
+      fetch('https://luentomuistiinpano-api.deta.dev/notes/')
+         .then((response) => response.json())
+         .then((data) => {
+            console.log(data);
+            setNotes(data);
+         })
+         .catch((err) => {
+            console.log(err.message);
+         });
+   }, []);
+	}
+
+	getNotes();
+
+	//täytetään kurssilista
 	const getCourses = async () => {
 		//const url = "https://luentomuistiinpano-api.deta.dev/courses";
 
@@ -27,21 +44,26 @@ function Buttons() {
          });
    }, []);
 
-		//addingCourses(d);
-
+		// 
 	}
 
+	//lisätään kursseja
 	const addingCourses = ( d ) => {
-		setCourses([...courses, d])
+
+		const id = courses.length +1;
+		const r = {id: id, name: d}
+		setCourses([...courses, r])
+		
+		console.log(courses)
 	}
 
 	getCourses();
 
+	//poistetaan muistiinpanoja
 	const deleteNote = (t) => {
-		const r = notes.filter(note => note.text !== t)
+		const r = notes.filter(text => text.text !== t)
 		setNotes(r);
-
-		console.log("poista klikattu")
+		console.log("poista klikattu " + r)
 	}
 
 	//nappien toimintahommat alkaa 
@@ -55,6 +77,7 @@ function Buttons() {
 		y(false);
 	}
 
+	//nappien toiminnallisuudet
 	const AddNote = () => {
 		console.log("AddNote clicked")
 		setna(current => !current);

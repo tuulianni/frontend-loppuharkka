@@ -33,11 +33,12 @@ li {
 
 	background-color: #f5f5dc;
 	width: 300px;
-	padding: 10px;
-	margin: 20px;
+
+	padding: 5px;
 
 	list-style-type: none;
 
+	margin-bottom: 20px;
 }
 
 #results {
@@ -48,8 +49,27 @@ li {
 }
 
 #delete {
+	text-align: center;
+	width: 20px;
 
-	text-align: right;
-	border-color: black;
 	border-width: 1px;
+	border-style: dotted;
+	border-radius: 20px;
+
+	margin: 5px;
+}
+
+#note-div {
+	padding: 10px;
+}
+
+#date, #note {
+	border-width: 1px 0px 0px 0px;
+	border-style: dashed;
+	
+	padding-top: 10px
+}
+
+#course {
+	text-transform: uppercase;
 }

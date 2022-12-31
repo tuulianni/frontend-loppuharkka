@@ -1,7 +1,6 @@
 import { useState } from "react";
-import Courses from "./courses";
 
-const AddCourses = () => {
+const AddCourses = ( { addingCourses } ) => {
 	
 	const [text, setText] = useState('')
 
@@ -11,6 +10,8 @@ const AddCourses = () => {
 			if (text == '') {
 				return;
 			}
+
+			addingCourses(text);
 
 		}
 

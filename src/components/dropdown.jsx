@@ -5,7 +5,7 @@ const Dropdown = ( {courses}) => {
 	const [name, setName] = useState('')
 
 	const handleChange = (e) => {
-		setName(e.target.name);
+		setName(e.target.value);
 
 	};
 
@@ -15,7 +15,7 @@ const Dropdown = ( {courses}) => {
 				<select value={name} onChange={handleChange}>
 
 					{courses.map((option, i) => (
-						<option key={i} value={option.name}>{option.name}</option>
+						<option key={i} id={option.id} value={option.name}>{option.name}</option>
 					))}
 				</select>
 			</label>
