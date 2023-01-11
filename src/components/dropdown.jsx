@@ -7,8 +7,10 @@ const Dropdown = ( {courses, handleCourse}) => {
 	const handleChange = (e) => {
 		setName(e.target.value);
 		console.log(e.target.value)
-		let x = e.target.value
-		let y = e.target.key
+
+		let i = e.target.selectedIndex
+		let y = e.target.value
+		let x = e.target.options[i].text
 		
 		handleCourse(x, y)
 
@@ -20,7 +22,7 @@ const Dropdown = ( {courses, handleCourse}) => {
 				<select value={name} onChange={handleChange}>
 						<option>Valitse kurssi</option>
 					{courses.map((option) => (
-						<option key={option.id} value={option.name}>{option.id}: {option.name}</option>
+						<option key={option.id} value={option.id}>{option.name}</option>
 					))}
 				</select>
 			</label>

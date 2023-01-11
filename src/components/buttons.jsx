@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import AddCourses from "./addcourses";
 import AddNotes from "./addnotes"
-import Dropdown from "./dropdown";
 import ListNotes from "./listnotes";
 
 function Buttons() {
@@ -30,7 +29,6 @@ function Buttons() {
 
 	//täytetään kurssilista
 	const getCourses = async () => {
-		//const url = "https://luentomuistiinpano-api.deta.dev/courses";
 
 		useEffect(() => {
       fetch('https://luentomuistiinpano-api.deta.dev/courses')
@@ -50,15 +48,12 @@ function Buttons() {
 	//lisätään kursseja
 	const addingCourses = ( d ) => {
 
-		const id = courses.length +1;
+		const id = courses.length;
 		const r = {id: id, name: d}
 		setCourses([...courses, r])
 
 		console.log(courses)
 		console.log("Opintojakso " + d + " lisätty id:lle " + id)
-
-		//en tiedä miten tän sais tonne tulostumaan kun teen tän täällä :(
-			return <p>Opintojakso {d} lisätty id:lle {id}</p>
 	}
 
 	getCourses();
@@ -125,7 +120,7 @@ function Buttons() {
 				)}
 				{ca && (
 					<div>
-						<AddCourses addingCourses = {addingCourses} />
+						<AddCourses addingCourses = {addingCourses} courses = {courses} />
 					</div>
 				)}
 		</div>

@@ -19,7 +19,8 @@ const AddNotes = ( { notes, setNotes, courses }) => {
 			setQuicknotes([...quicknotes, text]);
 			console.log(quicknotes)
 			
-			let d = JSON.stringify(new Date());
+			// let d = JSON.stringify(new Date());
+			let d = new Date().toLocaleString();
 			let new_note = { id: 0, text: text, course: c, timestamp: d }
 			console.log(new_note)
 			setText('')
