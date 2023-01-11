@@ -8,13 +8,14 @@ Tässä on nyt suurinosa toivotuista toiminnallisuuksista. Toivottavasti.
 
 Voit:
 - Lisätä muistiinpanoja haluamallesi kurssille sessioissa
-- Listata muistiinpanot, mutta et valitettavasti hakea niitä
+- Listata muistiinpanot, mutta et valitettavasti hakea niitä -> 11.1.2023 nyt voit hakea!
 - Voit poistaa muistiinpanoja
-- Voit lisätä kursseja, mutta et valitettavasti poistaa niitä
+- Voit lisätä kursseja
 
 Update 11.1.2023:
 - Kurssilisäyksen tulostus toimii
 - ID tulostuu muistiinpanolistaukseen
+- Voit nyt listata vain tietyn kurssin muistiinpanoja
 
 Asennus:
 
