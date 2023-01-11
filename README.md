@@ -12,6 +12,10 @@ Voit:
 - Voit poistaa muistiinpanoja
 - Voit lisätä kursseja, mutta et valitettavasti poistaa niitä
 
+Update 11.1.2023:
+- Kurssilisäyksen tulostus toimii
+- ID tulostuu muistiinpanolistaukseen
+
 Asennus:
 
 <code>

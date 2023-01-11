@@ -16,12 +16,9 @@ const AddCourses = ( { addingCourses, courses } ) => {
 			setTemp(current => !current);
 
 			setX(text)
-			console.log(x)
 
 			addingCourses(text);
 			setText('')
-
-			console.log(x)
 		}
 
 	return (

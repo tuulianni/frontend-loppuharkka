@@ -53,7 +53,6 @@ function Buttons() {
 		setCourses([...courses, r])
 
 		console.log(courses)
-		console.log("Opintojakso " + d + " lisätty id:lle " + id)
 	}
 
 	getCourses();
@@ -115,7 +114,10 @@ function Buttons() {
 					)}
 				{nl && (
 					<div>
-						<ListNotes notes = {notes} deleteNote = {deleteNote}/>
+						<ListNotes 
+							notes = {notes} 
+							courses = {courses}
+							deleteNote = {deleteNote}/>
 					</div>
 				)}
 				{ca && (

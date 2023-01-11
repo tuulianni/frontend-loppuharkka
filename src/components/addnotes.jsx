@@ -30,10 +30,9 @@ const AddNotes = ( { notes, setNotes, courses }) => {
 		}
 
 		const handleCourse = (x, y) => {
-			//id ei tule, enkä tiedä miksei :(
+
 			let new_course = {id: y, name: x}
 			console.log(x)
-			console.log("new_course: " + new_course)
 
 			setC(new_course)
 			setDD(false);
