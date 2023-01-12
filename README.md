@@ -21,8 +21,12 @@ Asennus:
 
 ```
 git clone https://github.com/tuulianni/frontend-loppuharkka.git
+```
 OR
+```
 git clone git@github.com:tuulianni/frontend-loppuharkka.git
+```
+```
 cd frontend-loppuharkka
 npm install
 npm run dev
