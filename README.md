@@ -19,14 +19,14 @@ Update 11.1.2023:
 
 Asennus:
 
-<code>
+```
 git clone https://github.com/tuulianni/frontend-loppuharkka.git
 OR
 git clone git@github.com:tuulianni/frontend-loppuharkka.git
 cd frontend-loppuharkka
 npm install
 npm run dev
-</code>
+```
 
 
 
